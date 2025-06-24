@@ -6315,6 +6315,31 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     const da = new DynamicAdapt("max");
     da.init();
+    const rangeLabels = document.querySelectorAll(".custom-range-slider");
+    const thumbWidth = 6;
+    rangeLabels.forEach((rangeLabel => {
+        const rangeInput = rangeLabel.querySelector('input[type="range"]');
+        const amountFormLine = rangeLabel.closest(".amount-form__line");
+        const beforeLabel = amountFormLine?.querySelector(".amount-form__before-label");
+        if (beforeLabel && rangeInput) {
+            let rangeBubble = beforeLabel.querySelector(".bubble");
+            if (!rangeBubble) {
+                rangeBubble = document.createElement("div");
+                rangeBubble.classList.add("bubble");
+                beforeLabel.insertBefore(rangeBubble, beforeLabel.firstChild);
+            }
+            positionBubble(rangeBubble, rangeInput);
+            rangeInput.addEventListener("input", (e => positionBubble(rangeBubble, e.target)));
+        }
+    }));
+    function positionBubble(bubbleElement, anchorElement) {
+        const {min, max, value, offsetWidth} = anchorElement;
+        const total = Number(max) - Number(min);
+        const perc = (Number(value) - Number(min)) / total;
+        const offset = thumbWidth / 2 - thumbWidth * perc;
+        bubbleElement.style.left = `calc(${perc * 100}% + ${offset}px)`;
+        bubbleElement.textContent = Number(value).toLocaleString("en-US");
+    }
     window["FLS"] = true;
     menuInit();
     headerScroll();
