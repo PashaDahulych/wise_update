@@ -4400,11 +4400,11 @@
                     }
                 });
             } else {
-                if (discoverSwiper) {
+                if (discoverSwiper && typeof discoverSwiper.destroy === "function") {
                     discoverSwiper.destroy();
                     discoverSwiper = null;
                 }
-                if (galleryPropSwiper) {
+                if (galleryPropSwiper && typeof galleryPropSwiper.destroy === "function") {
                     galleryPropSwiper.destroy();
                     galleryPropSwiper = null;
                 }
