@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250704105900">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250713111304">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -910,6 +910,11 @@
 					</ul>
 					<nav class="pagging">
 						<div class="pagging__body">
+							<a href="#" class="pagging__arr pagging__arr--l hidden"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+									<circle cx="13.5" cy="13.5" r="13.5" fill="white" />
+									<path d="M12 9L16 13L12 17" stroke="#1B393B" stroke-linecap="round" />
+								</svg>
+							</a>
 							<ul class="pagging__list">
 								<li>
 									<a href="#" class="pagging__item _active">1</a>
@@ -924,7 +929,7 @@
 									<a href="#" class="pagging__item drop">...</a>
 								</li>
 							</ul>
-							<a href="#" class="pagging__arrow"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+							<a href="#" class="pagging__arr pagging__arr-r"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
 									<circle cx="13.5" cy="13.5" r="13.5" fill="white" />
 									<path d="M12 9L16 13L12 17" stroke="#1B393B" stroke-linecap="round" />
 								</svg>
@@ -1742,7 +1747,63 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250704105900"></script>
+
+	<div id="priceTrends" aria-hidden="true" class="popup price-trends popup_show">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<h2 class="popup__price-trends">Price trends</h2>
+				<p class="popup__bedroom-amount">3 bedrooms apartments sold in Mansion 1 and Palm Jumeirah</p>
+				<div class="prop__options">
+					<div class="prop__item">
+						<input id="1Y" class="prop__input" checked type="radio" value="1Y" name="trends" />
+						<label for="1Y" class="prop__label">1Y</label>
+					</div>
+					<div class="prop__item">
+						<input id="2Y" class="prop__input" type="radio" value="2Y" name="trends" />
+						<label for="2Y" class="prop__label">2Y</label>
+					</div>
+					<div class="prop__item">
+						<input id="5Y" class="prop__input" type="radio" value="5Y" name="trends" />
+						<label for="5Y" class="prop__label">5Y</label>
+					</div>
+				</div>
+				<ul class="popup__values-trends">
+					<li class="popup__v-line"><span></span> Mansion 1</li>
+					<li class="popup__v-doth"><span></span> Palm Jumeirah</li>
+				</ul>
+				<div class="popup__trends">
+					<img src="img/trends/image_01.svg" alt="trends" />
+				</div>
+				<ul class="popup__month">
+					<li>Mar 24</li>
+					<li>May 24</li>
+					<li>jul 24</li>
+					<li>sep 24</li>
+					<li>nov 24</li>
+					<li>jan 24</li>
+				</ul>
+				<ul class="popup__property">
+					<li class="popup__property-item">
+						<p class="popup__property-text">
+							<span>This property costs 215% more</span> than the average price of
+							3 bedroom in Palm Jumeirah
+						</p>
+						<p class="popup__property-date">Average Sale Price is 11,620,392 AED</p>
+					</li>
+					<li class="popup__property-item">
+						<p class="popup__property-text">
+							<span>This property is 96% bigger</span> than the average size of 3 bedroom in Palm Jumeirah
+						</p>
+						<p class="popup__property-date">Average size is 3,125 sqft</p>
+					</li>
+				</ul>
+				<p class="popup__data-displayed">
+					The data displayed is based on average prices and sizes of all listings that were live on Property Finder in Palm Jumeirah.
+				</p>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20250713111304"></script>
 </body>
 
 </html>

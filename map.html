@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Empty page</title>
+	<title>Map view</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper map-view">
 		<header class="header" data-lp data-scroll="100">
 			<div class="header__cnt">
 				<a href="#" class="header__logo">
@@ -143,7 +143,11 @@
 			</div>
 		</header>
 
-		<main class="empty">
+		<main class="map">
+			<h1 class="hedden">Map view</h1>
+			<div class="map__view">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28908.383815816876!2d55.139899400000004!3d25.083305449999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b5402c126e3%3A0xb9511e6655c46d7c!2sDubai%20Marina%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2scz!4v1752391536781!5m2!1sen!2scz" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
 			<section class="buy__main">
 				<div class="buy__cnt">
 					<form action="#" method="post" class="buy__filters filters" data-one-select>
@@ -160,7 +164,7 @@
 						<div class="filters__line">
 							<select name="propertyType" data-class-modif="form" data-show-selected>
 								<option value="" selected>
-									Property type
+									Property Type
 								</option>
 								<option value="Apartment">Apartment</option>
 								<option value="Villa">Villa</option>
@@ -172,63 +176,15 @@
 								<option value="Duplex">Duplex</option>
 							</select>
 						</div>
-						<div class="filters__line">
-							<select name="minPrice" data-class-modif="form" data-show-selected>
-								<option value="" selected>Min Price</option>
-								<option value="AED 300,000">
-									AED 300,000
-								</option>
-								<option value="AED 400,000">
-									AED 400,000
-								</option>
-								<option value="AED 500,000">
-									AED 500,000
-								</option>
-								<option value="AED 600,000">
-									AED 600,000
-								</option>
-								<option value="AED 700,000">
-									AED 700,000
-								</option>
-								<option value="AED 800,000">
-									AED 800,000
-								</option>
-								<option value="AED 900,000">
-									AED 900,000
-								</option>
-								<option value="AED 1000,000">
-									AED 1000,000
-								</option>
-							</select>
+						<div class="filters__line-pr">
+							<div class="filters__inp-wr">
+								<input id="minPrice" autocomplete="off" type="text" name="minPrice" placeholder="Min Price" class="input" />
+							</div>
 						</div>
-						<div class="filters__line">
-							<select name="maxPrice" data-class-modif="form" data-show-selected>
-								<option value="" selected>Min Price</option>
-								<option value="AED 300,000">
-									AED 300,000
-								</option>
-								<option value="AED 400,000">
-									AED 400,000
-								</option>
-								<option value="AED 500,000">
-									AED 500,000
-								</option>
-								<option value="AED 600,000">
-									AED 600,000
-								</option>
-								<option value="AED 700,000">
-									AED 700,000
-								</option>
-								<option value="AED 800,000">
-									AED 800,000
-								</option>
-								<option value="AED 900,000">
-									AED 900,000
-								</option>
-								<option value="AED 1000,000">
-									AED 1000,000
-								</option>
-							</select>
+						<div class="filters__line-pr">
+							<div class="filters__inp-wr">
+								<input id="maxPrice" autocomplete="off" type="text" name="maxPrice" placeholder="Max Price" class="input" />
+							</div>
 						</div>
 						<div class="filters__line">
 							<select name="beds" data-class-modif="form" data-show-selected>
@@ -255,77 +211,36 @@
 						</div>
 					</form>
 					<div class="buy__result">
-						<div class="buy__body-result">
-							<h1 class="buy__ttl">
-								Properties for sale in Dubai
-							</h1>
-							<p class="buy__value"><span>0</span> results</p>
-						</div>
 						<div class="buy__body-actions">
 							<button data-popup="#mobFilters" type="button" class="buy__filter-btn">
 								Filter
 							</button>
+							<select name="sortFilter" data-class-modif="most-recent" data-show-selected>
+								<option value="Most Recent" selected>
+									Most Recent
+								</option>
+								<option value="Highest Price">
+									Highest Price
+								</option>
+								<option value="Lowest Price">
+									Lowest Price
+								</option>
+							</select>
 						</div>
 					</div>
-					<!-- <ul class="buy__list list"></ul> -->
-					<div class="list__empty">
-						<img src="img/empty-logo.svg" alt="wise logo" />
-					</div>
-				</div>
-			</section>
-			<section class="empty__get-in get-in">
-				<div class="get-in__cnt">
-					<div class="get-in__wrapper">
-						<div class="get-in__body">
-							<h3>Get in touch</h3>
-							<h2>Find your perfect match</h2>
-							<div class="get-in__text">
-								<p>
-									Didn't find the right option? Join our
-									priority list. Contact us, we will
-									inform you about the best options.
-								</p>
-							</div>
-							<form class="get-in__form" action="#" method="POST">
-								<div class="get-in__line">
-									<input type="tel" name="tel" placeholder="+971" class="input" />
-								</div>
-								<div class="get-in__line">
-									<input type="email" name="email" placeholder="Email" class="input" />
-								</div>
-								<div class="get-in__action">
-									<button type="submit" class="get-in__btn btn btn--gold">
-										Enquire now
-									</button>
-									<div class="get-in__captch">
-										<img src="img/captch.webp" alt="captch logo" />
-									</div>
-								</div>
-							</form>
+					<div class="map__card">
+						<button type="button" class="map__btn-close"></button>
+						<div class="map__image">
+							<img src="img/cards/image_01.webp" alt="apartment image">
 						</div>
-						<ul class="get-in__gallery">
-							<li class="get-in__item get-in__item--1">
-								<img src="img/get-in/image_01.webp" alt="card picture" />
-							</li>
-							<li class="get-in__item get-in__item--2">
-								<img src="img/get-in/image_02.webp" alt="card picture" />
-							</li>
-							<li class="get-in__item get-in__item--3">
-								<img src="img/get-in/image_01.webp" alt="card picture" />
-							</li>
-							<li class="get-in__item get-in__item--4">
-								<img src="img/get-in/image_02.webp" alt="card picture" />
-							</li>
-							<li class="get-in__item get-in__item--5">
-								<img src="img/get-in/image_01.webp" alt="card picture" />
-							</li>
-							<li class="get-in__item get-in__item--6">
-								<img src="img/get-in/image_02.webp" alt="card picture" />
-							</li>
-							<li class="get-in__item get-in__item--7">
-								<img src="img/get-in/image_01.webp" alt="card picture" />
-							</li>
-						</ul>
+						<div class="map__body">
+							<p class="map__listen">
+								Listed on 24 May 2025
+							</p>
+							<p class="map__price"></p>
+							<h2 class="map__ttl">2 BR Apartment Jumeirah Golf Estate</h2>
+							<p class="map__location">Jumeirah Golf Estate, Dubai</p>
+						</div>
 					</div>
 				</div>
 			</section>
