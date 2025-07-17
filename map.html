@@ -1,12 +1,25 @@
 <!doctype html>
 <html lang="en">
+<!-- <head>
+        <title>Map view</title>
+        <meta charset="UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" href="css/style.min.css?_v=20250717212706" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://api.mapbox.com/mapbox-gl-js/v3.13.0/mapbox-gl.css?_v=20250717212706"
+            rel="stylesheet"
+        />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v3.13.0/mapbox-gl.js?_v=20250717212706"></script>
+    </head> -->
 
 <head>
 	<title>Map view</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250713111716">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250717212706">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -144,8 +157,8 @@
 		</header>
 
 		<main class="map">
-			<h1 class="hedden">Map view</h1>
-			<div class="map__view">
+			<h1 class="hidden">Map view</h1>
+			<div id="map" class="map__view">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28908.383815816876!2d55.139899400000004!3d25.083305449999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b5402c126e3%3A0xb9511e6655c46d7c!2sDubai%20Marina%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2scz!4v1752391536781!5m2!1sen!2scz" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 			<section class="buy__main">
@@ -231,15 +244,17 @@
 					<div class="map__card">
 						<button type="button" class="map__btn-close"></button>
 						<div class="map__image">
-							<img src="img/cards/image_01.webp" alt="apartment image">
+							<img src="img/cards/image_01.webp" alt="apartment image" />
 						</div>
 						<div class="map__body">
-							<p class="map__listen">
-								Listed on 24 May 2025
-							</p>
+							<p class="map__listen">Listed on 24 May 2025</p>
 							<p class="map__price"></p>
-							<h2 class="map__ttl">2 BR Apartment Jumeirah Golf Estate</h2>
-							<p class="map__location">Jumeirah Golf Estate, Dubai</p>
+							<h2 class="map__ttl">
+								2 BR Apartment Jumeirah Golf Estate
+							</h2>
+							<p class="map__location">
+								Jumeirah Golf Estate, Dubai
+							</p>
 						</div>
 					</div>
 				</div>
@@ -1022,7 +1037,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250713111716"></script>
+	<script src="js/app.min.js?_v=20250717212706"></script>
+	</script> -->
 </body>
 
 </html>
