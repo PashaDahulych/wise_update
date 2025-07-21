@@ -4675,14 +4675,13 @@ input[type=range]::-webkit-slider-thumb {
   display: none
 }
 .mapboxgl-popup-content {
-  box-shadow: none;
-  padding: 0;
+  box-shadow: none!important;
+  padding: 0!important;
   pointer-events: auto;
   position: relative;
-  border-radius: 8px;
-  background: var(--white);
-  overflow: hidden;
-  z-index: 5
+  border-radius: 8px!important;
+  background: var(--white)!important;
+  overflow: hidden!important
 }
 .blog>:last-child {
   margin-bottom: 2.8125rem
@@ -5721,7 +5720,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: none
   }
   .mapboxgl-popup-content {
-    width: 320px
+    width: 320px!important
   }
   .blog__news:not(:last-child) {
     margin-bottom: 74px
