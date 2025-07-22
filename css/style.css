@@ -2167,7 +2167,7 @@ body::after {
   text-decoration-thickness: 1px
 }
 .team__cnt {
-  max-width: 1070px
+  max-width: 1160px
 }
 .team__header {
   max-width: 911px;
@@ -3161,9 +3161,29 @@ input[type=range]::-webkit-slider-thumb {
 }
 .main {
   position: relative;
-  padding-top: 5.875rem;
-  padding-bottom: 6.0625rem;
   background-color: var(--royal-green)
+}
+.main__cnt {
+  position: relative;
+  z-index: 2
+}
+.main__cnt h1 {
+  max-width: 440px;
+  color: var(--natural);
+  font-family: var(--secondFontFamily);
+  font-weight: 400;
+  line-height: 1.4
+}
+.main__cnt h1 span {
+  color: var(--gold);
+  font-style: italic
+}
+.main__cnt h1:not(:last-child) {
+  margin-bottom: 72px
+}
+.main__about {
+  position: relative;
+  z-index: 3
 }
 .main__bg {
   position: absolute;
@@ -3194,24 +3214,6 @@ input[type=range]::-webkit-slider-thumb {
   background-color: var(--royal-green);
   z-index: 3;
   pointer-events: none
-}
-.main__cnt {
-  position: relative;
-  z-index: 2
-}
-.main__cnt h1 {
-  max-width: 440px;
-  color: var(--natural);
-  font-family: var(--secondFontFamily);
-  font-weight: 400;
-  line-height: 1.4
-}
-.main__cnt h1 span {
-  color: var(--gold);
-  font-style: italic
-}
-.main__cnt h1:not(:last-child) {
-  margin-bottom: 72px
 }
 .main__form {
   max-width: 49.625rem
@@ -4735,10 +4737,6 @@ input[type=range]::-webkit-slider-thumb {
   color: var(--black);
   line-height: 1.6
 }
-.article__news .news__cnt {
-  max-width: 1127px;
-  padding-inline: 11px
-}
 .swiper {
   overflow: hidden
 }
@@ -5870,6 +5868,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .menu-ban__social {
     display: none
   }
+  .main__cnt {
+    padding-top: 5.875rem;
+    padding-bottom: 6.0625rem
+  }
   .main__bg::before {
     width: 250%
   }
@@ -6267,8 +6269,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     font-size: 1.5rem
   }
   .main {
-    padding-top: 2.1875rem;
     overflow: hidden
+  }
+  .main__cnt {
+    padding-top: 2.1875rem
+  }
+  .main__cnt h1 {
+    padding-inline: 1rem;
+    max-width: 100%;
+    text-align: center
+  }
+  .main__cnt h1:not(:last-child) {
+    margin-bottom: 191px
   }
   .main__bg {
     width: 100%;
@@ -6284,14 +6296,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     z-index: 1;
     background: linear-gradient(180deg,#1b393b 3.66%,rgba(115,115,115,0) 34.02%);
     pointer-events: none
-  }
-  .main__cnt h1 {
-    padding-inline: 1rem;
-    max-width: 100%;
-    text-align: center
-  }
-  .main__cnt h1:not(:last-child) {
-    margin-bottom: 191px
   }
   .main__form {
     max-width: 100%
@@ -6401,7 +6405,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 @media (max-width:991.98px)and (max-width:29.99875em) {
-  .main {
+  .main__cnt {
     padding-bottom: 2.1875rem
   }
 }
@@ -7986,7 +7990,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 @media (max-width:991.98px)and (min-width:61.99875em) {
-  .main {
+  .main__cnt {
     padding-bottom: 6.0625rem
   }
   .main__bg {
@@ -7995,12 +7999,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 @media (max-width:991.98px)and (min-width:29.99875em)and (max-width:61.99875em) {
   @supports (padding-bottom:clamp(2.1875rem ,-1.4451611328rem + 12.109375vw ,6.0625rem)) {
-    .main {
+    .main__cnt {
       padding-bottom: clamp(2.1875rem ,-1.4451611328rem + 12.109375vw ,6.0625rem)
     }
   }
   @supports not (padding-bottom:clamp(2.1875rem ,-1.4451611328rem + 12.109375vw ,6.0625rem)) {
-    .main {
+    .main__cnt {
       padding-bottom: calc(2.1875rem + 3.875*(100vw - 29.99875rem)/ 32)
     }
   }
