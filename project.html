@@ -2,14 +2,11 @@
 <html lang="en">
 
 <head>
+	<meta charset="UTF-8" />
 	<title>Project page</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250722203918">
-	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250826200121" />
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css?_v=20250826200121" rel="stylesheet" />
 </head>
 
 <body>
@@ -70,8 +67,12 @@
 									<li><a href="#">Off Plan</a></li>
 									<li><a href="#">Holiday Homes</a></li>
 									<li><a href="#">Commercial</a></li>
-									<li><a href="#">Renovation Service</a></li>
-									<li><a href="#">List Your Properties</a></li>
+									<li>
+										<a href="#">Renovation Service</a>
+									</li>
+									<li>
+										<a href="#">List Your Properties</a>
+									</li>
 								</ul>
 							</div>
 							<div class="menu__prop">
@@ -89,8 +90,8 @@
 								<ul>
 									<li>
 										<address>
-											Office 802, Marina Plaza, Dubai Marina, Dubai,
-											UAE
+											Office 802, Marina Plaza, Dubai
+											Marina, Dubai, UAE
 										</address>
 									</li>
 								</ul>
@@ -142,7 +143,6 @@
 				</nav>
 			</div>
 		</header>
-
 		<main class="project">
 			<nav class="project__breadcrumbs breadcrumbs">
 				<div class="breadcrumbs__cnt">
@@ -405,7 +405,9 @@
 										</ul>
 									</div>
 								</div>
-								<button type="button" class="aside-prop__morg-btn btn">Check Mortgage</button>
+								<button type="button" class="aside-prop__morg-btn btn">
+									Check Mortgage
+								</button>
 							</div>
 							<article class="aside-prop__renovation">
 								<div class="aside-prop__picture">
@@ -666,8 +668,15 @@
 								</tr>
 							</tbody>
 						</table>
-						<div class="char-prop__map">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3608.5586258998346!2d55.334499!3d25.251787!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5ce26735e1d9%3A0x57eed2f1f001d02a!2sCosta%20Coffee!5e0!3m2!1suk!2sua!4v1735295875365!5m2!1suk!2sua" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<div id="map" class="char-prop__map">
+							<!-- <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3608.5586258998346!2d55.334499!3d25.251787!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5ce26735e1d9%3A0x57eed2f1f001d02a!2sCosta%20Coffee!5e0!3m2!1suk!2sua!4v1735295875365!5m2!1suk!2sua"
+                                    width="600"
+                                    height="450"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                ></iframe> -->
 						</div>
 						<div class="gallery-prop__slider swiper">
 							<h2 class="gallery-prop__ttl">
@@ -1369,7 +1378,6 @@
 			</section>
 		</main>
 		<footer class="footer">
-			<!-- Ширина контейнеру 1149рх + потрібно буде додати паддінги безпеки по 20рх на сторону-->
 			<div class="footer__cnt">
 				<div class="footer__column">
 					<a href="index.html" class="footer__logo"><img src="img/banner-logo.svg" alt="logo" /></a>
@@ -1379,8 +1387,8 @@
 							<ul>
 								<li>
 									<address>
-										Office 802, Marina Plaza, Dubai Marina, Dubai,
-										UAE
+										Office 802, Marina Plaza, Dubai
+										Marina, Dubai, UAE
 									</address>
 								</li>
 							</ul>
@@ -1460,20 +1468,78 @@
 					<div class="footer__social">
 						<h3 class="footer__ttl">Follow Us</h3>
 						<ul>
-							<li><a href="#" target="_blank" class="_icon-facebook"></a></li>
+							<li>
+								<a href="#" target="_blank" class="_icon-facebook"></a>
+							</li>
 							<li>
 								<a href="#" target="_blank" class="_icon-instagram"></a>
 							</li>
-							<li><a href="#" target="_blank" class="_icon-twitter"></a></li>
-							<li><a href="#" target="_blank" class="_icon-linkedin"></a></li>
+							<li>
+								<a href="#" target="_blank" class="_icon-twitter"></a>
+							</li>
+							<li>
+								<a href="#" target="_blank" class="_icon-linkedin"></a>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</footer>
-
 	</div>
-	<script src="js/app.min.js?_v=20250722203918"></script>
+	<script src="js/app.min.js?_v=20250826200121"></script>
+	<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js?_v=20250826200121"></script>
+	<script>
+		mapboxgl.accessToken =
+			"pk.eyJ1IjoicGFzaGthLWRhIiwiYSI6ImNtZDk1emNlNTA0aGgya3BoYzR3c2hhOWkifQ.N9WbyPUNRkfbDz6Zub_dMQ"
+
+		const map = new mapboxgl.Map({
+			container: "map",
+			style: "mapbox://styles/mapbox/streets-v12",
+			center: [32, 49],
+			zoom: 6,
+		})
+
+		const points = [{
+			coords: [30.5234, 50.4501],
+			src: "img/cards/image_01.webp",
+			alt: "apartment image",
+			title: "2 BR Apartment Jumeirah Golf Estate",
+			price: "AED 85,000",
+			listen: "Listed on 24 May 2025",
+			location: "Jumeirah Golf Estate, Dubai",
+		}, ]
+
+		points.forEach((point) => {
+			const popup = new mapboxgl.Popup().setHTML(`
+                    <div class="map__card">
+                        <button type="button" class="map__btn-close"></button>
+                        <div class="map__image">
+                            <img src="${point.src}" alt="${point.alt}" />
+                        </div>
+                        <div class="map__body">
+                            <p class="map__listen">${point.listen}</p>
+                            <p class="map__price">${point.price}</p>
+                            <h2 class="map__ttl">${point.title}</h2>
+                            <p class="map__location">${point.location}</p>
+                        </div>
+                    </div>
+                `)
+
+			const marker = new mapboxgl.Marker()
+				.setLngLat(point.coords)
+				.setPopup(popup)
+				.addTo(map)
+
+			popup.on("open", () => {
+				const closeBtn = document.querySelector(".map__btn-close")
+				if (closeBtn) {
+					closeBtn.addEventListener("click", () => {
+						popup.remove()
+					})
+				}
+			})
+		})
+	</script>
 </body>
 
 </html>
